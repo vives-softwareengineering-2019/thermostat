@@ -4,6 +4,14 @@ In this exercise we will apply the course materials from software engineering. T
 
 ## Updating exercise instructions
 
+Exercise instructions will be added as weeks pass. To get the latest instructions you need to pull them into your own project. This can be done with the following command:
+
+```
+git pull https://github.com/vives-softwareengineering-2019/thermostat.git master --allow-unrelated-histories
+```
+
+This will add or update the `exercise.md` file and its dependencies in your own project.
+
 ## Tagging releases
 
 The exercise will continue to grow with extra features and changes. It is important to track the different states (or versions) of this project. For this we can make use of git **tags**.
