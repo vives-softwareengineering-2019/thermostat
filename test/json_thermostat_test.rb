@@ -7,7 +7,7 @@ describe "JSONThermostat" do
 
   it "should turn everything off when temperature is ok" do
     settings = JSON.generate({temperature: 20.0, range: 1.0})
-    measurement = JSON.generate({temperature: 200.0})
+    measurement = JSON.generate({temperature: 20.0})
     expected_result = JSON.generate({cooling: false, heating: false})
 
     thermostat = JSONThermostat.new settings
