@@ -82,7 +82,7 @@ The goal of the `App` is just to verify the `Thermostat` class, and that it is a
 
 ##### Directory structure
 
-It's always a good idea to structure your files. All your classes should live inside a `lib` directory. The `app.rb` file can be placed inisde the root directory. This structure will result in a clean project, it will allow you to easely find your files, and give feedback about theire function.
+It's always a good idea to structure your files. All your classes should live inside a `lib` directory. The `app.rb` file can be placed inside the root directory. This structure will result in a clean project, it will allow you to easily find your files, and give feedback about their function.
 
 ```
 thermostat-yourname
@@ -95,7 +95,7 @@ thermostat-yourname
 
 ##### Eliminating `require_relative`
 
-If you structure your files like the example abouve you  will be able to replace all `require_relative` functions by simple `require` functions. This will make your code way more portable and will handle refactorings much easier.
+If you structure your files like the example above you  will be able to replace all `require_relative` functions by simple `require` functions. This will make your code way more portable and will handle refactoring much easier.
 
 When running your application, the `require` statements must be able to find your files. You just have to tell the Ruby runtime that your `lib` directory should be included. This can be done by using the `-I` flag followed by the name of the directory. In this case that should become `-Ilib`
 
@@ -105,13 +105,13 @@ ruby -Ilib app.rb
 
 ##### Floats vs Integer
 
-When testing your application, keep in mind that it should work with floating point numbers. Because of Ruby's *strong typing* you MUST supply floating point notations while testing. For example if you would like to test with the value of `20` (Integer), then you need to explicitly write `20.0` (Float). Ruby will not automaticaly cast the Integer into a Float or visa versa.
+When testing your application, keep in mind that it should work with floating point numbers. Because of Ruby's *strong typing* you MUST supply floating point notations while testing. For example if you would like to test with the value of `20` (Integer), then you need to explicitly write `20.0` (Float). Ruby will not automatically cast the Integer into a Float or visa versa.
 
 ### v0.2 JSON Thermostat
 
-The `Thermostat` application is cool, but in only works using the commandline. The `Thermostat` should also be able to work using JSON. Many applications provide information in JSON format. Making sure our thermostat is able to receive and resond with JSON will make it usable in many more situations. 
+The `Thermostat` application is cool, but in only works using the command line. The `Thermostat` should also be able to work using JSON. Many applications provide information in JSON format. Making sure our thermostat is able to receive and respond with JSON will make it usable in many more situations. 
 
-In this version, you will create a `JSONThermostat` Class that is able to receive the settings in a JSON String, and is able to repond with a JSON String containing the result.
+In this version, you will create a `JSONThermostat` Class that is able to receive the settings in a JSON String, and is able to respond with a JSON String containing the result.
 
 The `JSONThermostat` class can accept the **settings** in JSON format. The expected format is:
 
@@ -141,7 +141,7 @@ The return value of the `update` method will output a JSON formatted `String`. A
 
 #### Tests
 
-Instead of using an `app.rb` or other application to test the behaviour of the `JSONThermostat` we can me use of *Software Tests*. In the `test` directory you can find some tests that will create an instance of your `JSONThermostat` class and will run some code against it. When everything works as expected, the tests will PASS. If your implementation is not correct, the tests will FAIL. These test will give feedback on the expected behaviour of your code.
+Instead of using an `app.rb` or other application to test the behavior of the `JSONThermostat` we can me use of *Software Tests*. In the `test` directory you can find some tests that will create an instance of your `JSONThermostat` class and will run some code against it. When everything works as expected, the tests will PASS. If your implementation is not correct, the tests will FAIL. These test will give feedback on the expected behavior of your code.
 
 To run the tests, you can execute the following command:
 
