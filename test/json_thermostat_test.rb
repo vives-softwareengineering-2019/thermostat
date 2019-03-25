@@ -1,4 +1,5 @@
 require 'minitest/autorun'
+require 'json'
 require 'json_thermostat'
 
 describe "JSONThermostat" do
