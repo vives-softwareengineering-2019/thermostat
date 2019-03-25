@@ -186,3 +186,40 @@ JSONThermostat#test_0001_should turn everything off when temperature is ok [C:/U
 
 10 runs, 15 assertions, 1 failures, 0 errors, 0 skips
 ```
+
+### v0.3 Adding support for units
+
+The thermostat is getting really nice. It can already do a lot. But at the moment the thermostat only works with a single unit of temperature. It works exclusively in Celsius or Fahrenheit or Kelvin. Some sensors provide there temperature values in a different unit that is used by the user. For example, an European user will set its thermostat using Celsius, but an American sensor that is used in the system will publish its values in Fahrenheit. It would be great if the application would support an additional 'unit' value in which the values are given.
+
+To solve this, both the `setting` and `measurement` JSON objects could have an optional property called `unit`. The unit property could contain the following values `celsius`, `fahrenheit` or `kelvin`.
+
+If no unit is given, it will default to `celsius`.
+
+Any combination should be supported.
+
+For example, you could now provide the following thermostat setting:
+
+```json
+{
+  "temperature": 68.0,
+  "range": 1.8,
+  "unit": "fahrenheit"
+}
+```
+
+And update the temperature using the following format:
+
+```json
+{
+  "temperature": 269.5,
+  "unit": "kelvin"
+}
+```
+
+The return value of the `update` method will output a JSON formatted `String`. An example is show below.
+
+```json
+{
+  "cooling": false,
+  "heating": false
+}
