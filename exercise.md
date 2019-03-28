@@ -223,5 +223,6 @@ The return value of the `update` method will output a JSON formatted `String`. A
   "cooling": false,
   "heating": false
 }
+```
 
 Note that `range` is a relative temperature difference, and `temperature` is an absolute temperature value. They should not be treated the same when converting them between different units. Eg: *1 Kelvin* range is not equal to *-272.15* °C, but *1 °C*.
