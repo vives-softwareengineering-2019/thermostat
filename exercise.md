@@ -226,3 +226,20 @@ The return value of the `update` method will output a JSON formatted `String`. A
 ```
 
 Note that `range` is a relative temperature difference, and `temperature` is an absolute temperature value. They should not be treated the same when converting them between different units. Eg: *1 Kelvin* range is not equal to *-272.15* °C, but *1 °C*.
+
+### v0.3-a Single responsibility analyses
+
+To determine if your classes and methods have a single responsibility it may be a good idea to analyze them. 
+
+First you need to document the structure of your code by creating an UML class diagram that lists all *private* and *public* methods (not the properties). You can do this in a `responsibility_analysis-v0.3.md` file inside the `/docs` directory.
+
+Then you need to determine if the code is placed in the correct location by using the methods discussed in [Determining if a class has a single responsibility](https://vives.gitbook.io/software-engineering/practical-object-oriented-design-in-ruby/designing_classes_with_a_single_response#determining-if-a-class-has-a-single-responsibility). Try to fully describe all classes and methods in one sentence, and list those descriptions in the documentation.
+
+Next you need to mark the code that may contain multiple responsibilities.
+
+Finaly refactor your actual code so that it only contains out of methods and classes with a single responsibility. 
+
+When done tag your version with `v0.3-a`. Note that we did not bump the version to `v0.4` because there is not functionality added, the behavior is just reordered to meet a better design.
+
+### Example
+
