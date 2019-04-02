@@ -240,3 +240,29 @@ Next you need to mark the code that may contain multiple responsibilities.
 Finaly refactor your actual code so that it only contains out of methods and classes with a single responsibility.
 
 When done tag your version with `v0.3-a`. Note that we did not bump the version to `v0.4` because there is not functionality added, the behavior is just reordered to meet a better design.
+
+### v0.3-b managing dependencies
+
+Refactor your code so that dependencies are minimized. Use `dependency injection` or `dependency isolation` where needed.
+
+Try to remove all method argument order dependencies for all your methods.
+
+### v0.3-c code style and layout cleanup
+
+RuboCop is a tool that will scan your code and generate some reports. In this case we are going to use it for evaluating the code style and layout of this project. Using a simple command you will get a report of the current state of your code. This report can then be used to try and resolve the issues.
+
+Install the dependencies with the following command:
+
+```shell
+bundle install
+```
+
+Next you can run the RuboCop style and layout checker on your code by using the following rake task:
+
+```shell
+rake rubocop
+```
+
+This task will report where style and layout should be improved.
+
+Try to cleanup and solve as much as possible
