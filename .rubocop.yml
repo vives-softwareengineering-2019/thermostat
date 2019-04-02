@@ -1,0 +1,17 @@
+Style/Encoding:
+  Enabled: false
+
+Style/Documentation:
+  Enabled: false
+
+Lint/UselessAssignment:
+  Enabled: false
+
+# Metrics/LineLength:
+#   Max: 99
+
+AllCops:
+  Exclude:
+    - 'test/**/*'
+  Include: 
+    - 'lib/**/*.rb'
